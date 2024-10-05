@@ -2,14 +2,20 @@
 @import url("../src/shared/style/normalize.css");
 
 /* Подключение шрифтов  */
-@import url("../src/shared/assets/fonts/Proxima/proximaNova.css");
+@import url("../src/shared/assets/fonts/Inter-Web/inter.css");
 
 body {
   margin: 0, auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #f5f7fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 a {
   text-decoration: none;
 }
+
+svg path {
+  stroke:inherit;
+  stroke-width:inherit;
+  fill:inherit;
+  }

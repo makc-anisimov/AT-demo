@@ -1,0 +1,92 @@
+.sideMenu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 249px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  border-right: 1px solid #e6eff5;
+  background-color: #fff;
+
+  &__logoWrapper {
+    margin-top: 1px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    margin-left: 44px;
+    width: 183px;
+    height: 36px;
+  }
+  &__items {
+    // margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    // row-gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding-left: 43px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 26px;
+    overflow: hidden;
+    height: 64px;
+
+    &:hover ,
+    &_active {
+      cursor: default;
+      .sideMenu__icon {
+        fill: #1814f3;
+        stroke: #1814f3;
+        margin-left: -2px;
+        margin-top: -2px;
+      }
+      .sideMenu__text {
+        color: #1814f3;
+      }
+    }
+    &_active {
+      .sideMenu__itemStick {
+        visibility: visible;
+      }
+    }
+    &Stick {
+      visibility: hidden;
+      position: absolute;
+      left: -6px;
+      top: 0px;
+      bottom: 0;
+      width: 12px;
+      height: 60px;
+
+      background: #1814f3;
+      border-radius: 10px;
+    }
+  }
+
+  &__icon {
+    fill: #b1b1b1;
+    stroke: #b1b1b1;
+  }
+  &__text {
+    color: rgb(177, 177, 177);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}
