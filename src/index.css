@@ -1,0 +1,15 @@
+/* сброс стандартных стилей */
+@import url("../src/shared/style/normalize.css");
+
+/* Подключение шрифтов  */
+@import url("../src/shared/assets/fonts/Proxima/proximaNova.css");
+
+body {
+  margin: 0, auto;
+  background-color: rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none;
+}
