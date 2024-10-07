@@ -1,9 +1,148 @@
 .header {
   height: 100px;
-  width: 100%;
-// border: 2px solid red;
-border-bottom: 1px solid #e6eff5;
-background-color: #fff;
+  width: calc(100% - 80px);
+  border-bottom: 1px solid #e6eff5;
+  background-color: #fff;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
+  &__mobMenuBtn {
+    display: none;
+    width: 18px;
+    height: 14px;
+    background: none;
+    border: none;
+    background-image: url(../../shared/assets/icons/mobile-menu-btn.svg);
+  }
+  &__title {
+    margin: 0;
+    color: rgb(52, 60, 106);
+    font-family: "Inter";
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__personal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  &__searchInput {
+    padding-left: 60px;
+    width: 195px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    background: #f5f7fa
+      url("../../shared/assets/icons/magnifying-glass.svg") 25px center
+      no-repeat;
+    background-size: 20px 20px;
+    background-position: 25px center;
+    color: #8ba3cb;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    &::placeholder {
+      color: #8ba3cb;
+    }
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+  &__button {
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__buttonImage {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
+    &_settings {
+      background-image: url(../../shared/assets/icons/settings.svg);
+    }
+    &_notification {
+      background-image: url(../../shared/assets/icons/002-notification-1.svg);
+    }
+  }
+  &__avatar {
+    cursor: pointer;
+    margin-left: 35px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url(../../shared/assets/images/avatar.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 25px 20px;
+    width: calc(100% - 50px);
+    border: none;
+
+    &__title {
+      height: 35px;
+    }
+    &__mobMenuBtn {
+      display: block;
+      position: absolute;
+      left: 25px;
+      top: 25px;
+    }
+    &__menu {
+      width: 100%;
+    }
+    &__personal {
+      width: 100%;
+    }
+    &__searchInput {
+      width: 100%;
+      padding-left: 45px;
+      background-size: 16px 16px;
+      background-position: 19px center;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__button {
+      display: none;
+    }
+    &__avatar {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      right: 25px;
+      top: 25px;
+    }
+  }
 }
