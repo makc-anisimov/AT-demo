@@ -1,0 +1,58 @@
+.calendar {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  min-height: 50px;
+  overflow: hidden;
+  // padding: 0 20px;
+  // box-sizing: border-box;
+  // border: 1px solid #dfeaf2;
+  // border-radius: 15px;
+  // background: #ffffff;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  // align-items: center;
+  &__inputDate {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #dfeaf2;
+    border-radius: 15px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__value {
+    color: #718ebf;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &__buttonDownImage {
+    width: 12px;
+    height: 6px;
+    background-image: url(../../shared/assets/icons/down.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    // right: 25px;
+  }
+}

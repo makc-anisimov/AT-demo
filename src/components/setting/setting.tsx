@@ -2,6 +2,7 @@ import styles from "./setting.module.scss";
 import AvatarImage from "../../shared/assets/images/avatar.jpg";
 import EditAvatarLogo from "../../shared/assets/icons/edit-avatar.svg";
 import clsx from "clsx";
+import { Calendar } from "../calendar/calendar";
 
 export const Setting = () => {
   const handleSubmitForm = (evt: React.FormEvent<HTMLFormElement>) => {
@@ -13,8 +14,9 @@ export const Setting = () => {
     <section className={styles.setting}>
       <nav className={styles.setting__menu}>
         <ul className={styles.setting__menuItems}>
-          <li className={styles.setting__menuItem}>
+          <li className={clsx(styles.setting__menuItem, styles.setting__menuItem_active)}>
             <button className={styles.setting__menuButton}>Edit Profile</button>
+            <div className={styles.setting__itemStick} />
           </li>
           <li className={styles.setting__menuItem}>
             <button className={styles.setting__menuButton}>Preferences</button>
@@ -58,6 +60,7 @@ export const Setting = () => {
                   styles.setting__inputYourName
                 )}
                 type="text"
+                placeholder="Charlene Reed"
               />
             </label>
             <label className={styles.setting__field}>
@@ -75,6 +78,7 @@ export const Setting = () => {
                   styles.setting__inputUserName
                 )}
                 type="text"
+                placeholder="Charlene Reed"
               />
             </label>
             <label className={styles.setting__field}>
@@ -92,6 +96,7 @@ export const Setting = () => {
                   styles.setting__inputEmail
                 )}
                 type="email"
+                placeholder="charlenereed@gmail.com"
               />
             </label>
             <label className={styles.setting__field}>
@@ -109,6 +114,7 @@ export const Setting = () => {
                   styles.setting__inputPassword
                 )}
                 type="password"
+                placeholder="1234567"
               />
             </label>
             <label className={styles.setting__field}>
@@ -120,12 +126,13 @@ export const Setting = () => {
               >
                 Date of Birth
               </span>
-              <input
+              <Calendar />
+              {/* <input
                 className={clsx(
                   styles.setting__input,
                   styles.setting__inputDate
                 )}
-              />
+              /> */}
             </label>
             <label className={styles.setting__field}>
               <span
@@ -141,6 +148,8 @@ export const Setting = () => {
                   styles.setting__input,
                   styles.setting__inputPresentAddress
                 )}
+                type="text"
+                placeholder="San Jose, California, USA"
               />
             </label>
             <label className={styles.setting__field}>
@@ -157,6 +166,8 @@ export const Setting = () => {
                   styles.setting__input,
                   styles.setting__inputPermanentAddress
                 )}
+                type="text"
+                placeholder="San Jose, California, USA"
               />
             </label>
             <label className={styles.setting__field}>
@@ -173,6 +184,8 @@ export const Setting = () => {
                   styles.setting__input,
                   styles.setting__inputCity
                 )}
+                type="text"
+                placeholder="San Jose"
               />
             </label>
             <label className={styles.setting__field}>
@@ -189,6 +202,8 @@ export const Setting = () => {
                   styles.setting__input,
                   styles.setting__inputPostalCode
                 )}
+                type="text"
+                placeholder="45962"
               />
             </label>
             <label className={styles.setting__field}>
@@ -205,6 +220,8 @@ export const Setting = () => {
                   styles.setting__input,
                   styles.setting__inputCountry
                 )}
+                type="text"
+                placeholder="USA"
               />
             </label>
           </div>

@@ -3,23 +3,41 @@
   margin: 30px auto;
   padding: 30px;
   border-radius: 25px;
-  background: rgb(255, 255, 255);
+  background: #ffffff;
 
   &__menu {
     width: 100%;
     border-bottom: 1px solid #f4f5f7;
-    margin-bottom: 52px;
+    margin-bottom: 51px;
   }
 
   &__menuItems {
     display: flex;
     flex-direction: row;
+    gap: 41px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   &__menuItem {
+    padding: 8px 16px 9px 17px;
+    position: relative;
+    overflow: hidden;
+    &_active {
+      .setting__menuButton {
+        color: #1814f3;
+      }
+    }
+  }
+  &__itemStick {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    left: 0;
+    bottom: -4px;
+    background: #1814f3;
   }
 
   &__menuButton {
@@ -50,6 +68,7 @@
   }
 
   &__avatarImage {
+    margin-top: 4px;
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -61,7 +80,7 @@
     background: none;
     position: absolute;
     right: -2px;
-    bottom: 16px;
+    bottom: 12px;
   }
   &__form {
     width: 100%;
@@ -70,7 +89,6 @@
     gap: 30px;
   }
   &__fields {
-    // width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(5, 1fr);
@@ -81,7 +99,6 @@
     display: flex;
     flex-direction: column;
     gap: 11px;
-    // width: 100%;
   }
   &__subtitle {
     color: #232323;
@@ -93,16 +110,14 @@
     text-align: left;
   }
   &__input {
-    
     min-height: 50px;
     min-width: 0;
     padding: 0 20px;
     margin: 0;
-    border: 0;
     box-sizing: border-box;
-    border: 1px solid rgb(223, 234, 242);
+    border: 1px solid #dfeaf2;
     border-radius: 15px;
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     color: #718ebf;
     font-family: "Inter";
     font-size: 15px;
@@ -115,14 +130,12 @@
     }
     &:focus {
       outline: none;
-      border: 1px solid rgb(223, 234, 242);
-
-      // border: none;
+      border: 1px solid #dfeaf2;
     }
   }
   &__submitButton {
     min-width: 190px;
-    min-height: 50px;
+    height: 50px;
     border: 0;
     padding: 0;
     border-radius: 15px;
@@ -138,9 +151,39 @@
     cursor: pointer;
   }
   @media screen and (max-width: 980px) {
+    &__data {
+      flex-direction: column;
+      gap: 22px;
+    }
+    &__avatar {
+      align-self: center;
+    }
     &__fields {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       grid-template-rows: 10fr;
+      gap: 16px;
+    }
+    &__field {
+      gap: 9px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__input {
+      min-height: 40px;
+      padding: 0 15px;
+      font-size: 12px;
+      line-height: 15px;
+      border-radius: 10px;
+    }
+    &__submitButton {
+      height: 40px;
+      min-width: 0;
+      width: 100%;
+      border-radius: 9px;
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 }
