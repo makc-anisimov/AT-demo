@@ -1,0 +1,146 @@
+.setting {
+  width: calc(100% - 140px);
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: rgb(255, 255, 255);
+
+  &__menu {
+    width: 100%;
+    border-bottom: 1px solid #f4f5f7;
+    margin-bottom: 52px;
+  }
+
+  &__menuItems {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menuItem {
+  }
+
+  &__menuButton {
+    border: none;
+    padding: 0;
+    background: none;
+    color: #718ebf;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__data {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+  }
+  &__avatar {
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+  }
+
+  &__avatarImage {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__avatarEditIcon {
+    width: 30px;
+    height: 30px;
+    background: none;
+    position: absolute;
+    right: -2px;
+    bottom: 16px;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__fields {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 22px;
+    column-gap: 29px;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    // width: 100%;
+  }
+  &__subtitle {
+    color: #232323;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__input {
+    
+    min-height: 50px;
+    min-width: 0;
+    padding: 0 20px;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(223, 234, 242);
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: #718ebf;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    &::placeholder {
+      color: #718ebf;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid rgb(223, 234, 242);
+
+      // border: none;
+    }
+  }
+  &__submitButton {
+    min-width: 190px;
+    min-height: 50px;
+    border: 0;
+    padding: 0;
+    border-radius: 15px;
+    background: #1814f3;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 980px) {
+    &__fields {
+      grid-template-columns: 1fr;
+      grid-template-rows: 10fr;
+    }
+  }
+}
