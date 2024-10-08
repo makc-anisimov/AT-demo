@@ -15,7 +15,7 @@ export const Setting = () => {
       <nav className={styles.setting__menu}>
         <ul className={styles.setting__menuItems}>
           <li className={clsx(styles.setting__menuItem, styles.setting__menuItem_active)}>
-            <button className={styles.setting__menuButton}>Edit Profile</button>
+            <button className={styles.setting__menuButton}>Edit&nbsp;Profile</button>
             <div className={styles.setting__itemStick} />
           </li>
           <li className={styles.setting__menuItem}>
